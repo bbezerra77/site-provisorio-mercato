@@ -1,54 +1,67 @@
-# Mercato Jardim · Website Oficial Provisório
+# Mercato Jardim · Website Oficial Imersivo
 
-> **O primeiro supermercado pet friendly de São Paulo.**  
-> Projeto redesenhado e modernizado com identidade visual editorial inspirada na excelência da **PEG-AI** e recursos interativos desenvolvidos sob medida.
-
----
-
-## 🌟 Destaques do Projeto
-
-- **Identidade Visual Contemporânea**:
-  - Paleta com Amarelo Vibrante (`#FED401`), Creme / Off-white (`#F5F1EA`), Azul Índigo (`#6366F1`) e Preto Profundo (`#111111`).
-  - Tipografia sofisticada com **Fraunces** (títulos serifados com itálicos expressivos) e **Inter Tight** (corpo moderno).
-  - Design tokens com botões em formato de pílula (`border-radius: 999px`) e grid de 4px.
-
-- **Animação de Abertura (Cesta em Movimento)**:
-  - Animação no Hero com itens caindo dinamicamente na cesta com física suave (maçã 🍎, pão 🥖, costela 🥩, leite 🥛, bolacha 🍪 e petisco 🦴).
-  - Contador interativo de itens.
-
-- **Vitrine Interativa de Setores**:
-  - Abas numeradas:
-    1. `01 Hortifrúti Fresco`
-    2. `02 Açougue & Carnes Nobres`
-    3. `03 Padaria & Pães`
-    4. `04 Mercearia & Empório`
-    5. `05 Espaço Pet & Adega Mob Wine`
-
-- **Cesta Reativa & Pedido no WhatsApp**:
-  - Gaveta lateral (*slide-over drawer*) com cálculo de itens e controle de quantidade.
-  - Botão de checkout que formata e envia a lista de compras diretamente para o WhatsApp oficial do mercado.
-
-- **Diferencial 100% Pet Friendly**:
-  - Informações sobre carrinhos adaptados para animais de estimação, ponto de hidratação, petiscos cortesia na entrada e protocolo sanitário rigoroso.
-
-- **Localização**:
-  - Rua Piracicaba, 244 - Vila Valparaíso, Santo André - SP.
+> **O prazer autêntico de estar no mercado.**  
+> Novo projeto com a identidade visual genuína do **Mercato Jardim**: tons de **madeira nobre**, o icônico **Limão Siciliano**, a **Adega Mob Wine**, atrações culturais de empório e as 2 lojas em Santo André.
 
 ---
 
-## 🚀 Como Executar Localmente
+## 🍋 Identidade Visual & Conceito
 
-Como o projeto é construído em Vanilla HTML5, CSS3 e JavaScript puro, não requer etapas de compilação:
+- **Paleta de Cores do Empório**:
+  - **Madeira Nobre / Carvalho Escuro** (`#2B1810` e `#3E2317`): aconchego, tradição e sofisticação das prateleiras de empório.
+  - **Limão Siciliano Solar** (`#F7CE28`): frescor cítrico, energia e a marca registrada do Mercato.
+  - **Vinho Bordô / Rubi** (`#661928`): destaque exclusivo para a Adega Mob Wine.
+  - **Creme / Papel Artesanal** (`#FAF7F2`): leitura confortável e atmosfera calorosa.
+  - **Verde Folha Mediterrâneo** (`#264D24`): hortifrúti vivo e produtos da horta.
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/bbezerra77/site-provisorio-mercato.git
-```
+- **Tipografia**:
+  - Títulos elegantes com **Cormorant Garamond** (serif editorial italiano clássico com itálicos expressivos).
+  - Corpo com **Plus Jakarta Sans** para máxima clareza e ritmo moderno.
+  - Badges e detalhes técnicos com **JetBrains Mono**.
 
-2. Abra o arquivo `index.html` em qualquer navegador ou utilize um servidor local:
+---
+
+## 🛒 Experiência Sensorial & Recursos Interativos
+
+1. **"Pegue seu Carrinho e Passeie"**:
+   - Carrinho rústico ilustrado no Hero com animação de itens caindo com física suave (limão siciliano 🍋, vinho 🍷, pão de fermentação 🥖, picanha nobre 🥩, leite da fazenda 🥛 e petisco pet 🦴).
+   - Botão para repetir a animação a qualquer momento.
+
+2. **Música Ambiente Opcional do Mercato**:
+   - Botão no topo para ativar acordes suaves e aveludados de jazz/bossa acústico com sintetizador nativo via **Web Audio API** (sem arquivos pesados ou dependências externas).
+
+3. **Adega Mob Wine em Destaque**:
+   - Bloco nobre climatizado com mais de 800 rótulos nacionais e importados, degustações semanais com sommeliers e harmonização com queijos finos.
+
+4. **Corredores do Mercado**:
+   - Navegação em abas rústicas de madeira:
+     - `Corredor 01 · Adega & Mob Wine`
+     - `Corredor 02 · Hortifrúti & Citrus`
+     - `Corredor 03 · Açougue Gourmet`
+     - `Corredor 04 · Padaria Artesanal`
+     - `Corredor 05 · Mercearia & Empório`
+     - `Corredor 06 · Espaço Pet Friendly`
+
+5. **Mais que um Mercado: Atrações Culturais**:
+   - Jazz e Bossa ao vivo aos fins de semana.
+   - Degustações guiadas com sommeliers.
+   - Boutique de carnes na brasa / parrilla.
+   - Espaço café e confeitaria.
+
+6. **As 2 Unidades Oficiais de Santo André**:
+   - **Loja 1**: Rua das Esmeraldas, 379 - Bairro Jardim
+   - **Loja 2**: Rua Piracicaba, 244 - Vila Valparaíso
+   - Botões diretos para Google Maps, Waze e WhatsApp de cada unidade.
+
+---
+
+## 🚀 Como Executar
+
+Abra diretamente no navegador ou rode localmente:
 ```bash
 npx serve
 ```
+Acesse em: `http://localhost:3000`
 
 ---
 

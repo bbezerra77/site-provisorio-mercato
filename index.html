@@ -3,523 +3,604 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mercato Jardim · O Primeiro Supermercado Pet Friendly de São Paulo</title>
-  <meta name="description" content="Mercato Jardim em Santo André. Hortifrúti selecionado, açougue nobre, padaria artesanal e empório em um espaço 100% pet friendly. Peça pelo WhatsApp!">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+  <title>Mercato Jardim · Empório, Hortifrúti, Açougue & Adega de Vinhos</title>
+  <meta name="description" content="O Mercato Jardim é a experiência sensorial de um verdadeiro empório gourmet em Santo André. Adega de vinhos, hortifrúti fresco, açougue nobre e 100% pet friendly.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍋</text></svg>">
 
-  <!-- Google Fonts: Fraunces, Inter Tight, JetBrains Mono -->
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="top-announcement">
-    <div class="container announcement-content">
-      <span class="badge-status">
-        <span class="status-pulse"></span> Aberto Agora em Santo André
-      </span>
-      <span class="announcement-text">
-        🐾 Traga seu pet para fazer compras junto com você · Carrinhos adaptados & petiscos na entrada
-      </span>
-      <a href="#localizacao" class="announcement-link">Ver como chegar →</a>
+  <!-- Top Ribbon: Unidades & Ambient Lounge Music Toggle -->
+  <div class="wood-top-ribbon">
+    <div class="container ribbon-inner">
+      <div class="ribbon-units">
+        <span class="unit-indicator-badge">
+          <span class="pulse-dot"></span> 2 Unidades em Santo André
+        </span>
+        <span class="unit-addresses">
+          <strong>Loja 1:</strong> R. das Esmeraldas, 379 (B. Jardim) · <strong>Loja 2:</strong> R. Piracicaba, 244 (Valparaíso)
+        </span>
+      </div>
+
+      <div class="ribbon-tools">
+        <!-- Ambient Sound Toggle -->
+        <button class="sound-toggle-btn" id="soundToggleBtn" aria-label="Ativar som ambiente de empório">
+          <span class="sound-icon" id="soundIcon">🔇</span>
+          <span class="sound-label" id="soundLabel">Música do Mercato</span>
+        </button>
+        <span class="pet-friendly-ribbon-tag">🐾 100% Pet Friendly</span>
+      </div>
     </div>
   </div>
 
-  <!-- Header / Navigation -->
-  <header class="main-header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="#" class="brand-logo" aria-label="Mercato Jardim Página Inicial">
-        <span class="brand-mark">M·J</span>
-        <div class="brand-info">
-          <span class="brand-name">Mercato Jardim</span>
-          <span class="brand-tagline">Supermercado & Empório Pet Friendly</span>
+  <!-- Header / Navigation Bar com textura de madeira nobre e ilha flutuante -->
+  <header class="wood-header" id="mainHeader">
+    <div class="container header-container">
+      
+      <!-- Brand Logo com Limão Siciliano SVG -->
+      <a href="#" class="mercato-brand" aria-label="Mercato Jardim Página Inicial">
+        <div class="lemon-logo-badge">
+          <svg viewBox="0 0 100 100" class="lemon-svg" xmlns="http://www.w3.org/2000/svg">
+            <!-- Folhas verdes -->
+            <path d="M 50 22 C 38 10 24 15 22 28 C 35 34 46 28 50 22 Z" fill="#2E5528"/>
+            <path d="M 50 20 C 62 8 76 13 78 26 C 65 32 54 26 50 20 Z" fill="#3B6B34"/>
+            <!-- Ramo -->
+            <path d="M 50 25 L 50 14" stroke="#4A2B1D" stroke-width="3" stroke-linecap="round"/>
+            <!-- Limão Siciliano com pontas características -->
+            <path d="M 50 24 C 76 24 88 44 86 64 C 84 80 66 90 50 90 C 34 90 16 80 14 64 C 12 44 24 24 50 24 Z" fill="#F7CE28"/>
+            <!-- Textura e brilho do limão -->
+            <path d="M 38 34 C 44 29 56 29 62 34" stroke="#FFF0A0" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <ellipse cx="64" cy="58" rx="8" ry="12" fill="#E8BD1A" opacity="0.4"/>
+            <!-- Pontinha inferior típica do limão siciliano -->
+            <path d="M 48 89 Q 50 94 52 89 Z" fill="#E8BD1A"/>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">MERCATO JARDIM</span>
+          <span class="brand-subtitle">Empório · Adega & Frescor Toscano</span>
         </div>
       </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#setores" class="nav-item">Setores</a>
-        <a href="#pet-friendly" class="nav-item">Espaço Pet</a>
-        <a href="#diferenciais" class="nav-item">Diferenciais</a>
-        <a href="#localizacao" class="nav-item">Localização</a>
+      <!-- Menu Principal -->
+      <nav class="wood-nav-links">
+        <a href="#experiencia" class="wood-nav-item">O Mercato</a>
+        <a href="#adega" class="wood-nav-item">Adega Mob Wine</a>
+        <a href="#corredores" class="wood-nav-item">Corredores</a>
+        <a href="#atracoes" class="wood-nav-item">Atrações</a>
+        <a href="#pet-friendly" class="wood-nav-item">Espaço Pet</a>
+        <a href="#unidades" class="wood-nav-item">Unidades</a>
       </nav>
 
-      <div class="nav-actions">
-        <!-- Floating Cart Trigger Button -->
-        <button class="cart-trigger-btn" id="openCartBtn" aria-label="Abrir carrinho de compras">
-          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          <span class="cart-badge" id="cartCountBadge">0</span>
-          <span class="cart-btn-label">Cesta</span>
+      <!-- Carrinho / Ações Rápidas -->
+      <div class="header-actions">
+        <!-- Botão Carrinho de Vime/Madeira -->
+        <button class="wood-cart-btn" id="openCartBtn" aria-label="Abrir minha cesta">
+          <span class="basket-icon">🧺</span>
+          <span class="cart-label">Minha Cesta</span>
+          <span class="cart-badge-counter" id="cartCountBadge">0</span>
         </button>
 
-        <a href="https://wa.me/5511983215016?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20no%20Mercato%20Jardim!" target="_blank" rel="noopener" class="btn-primary">
+        <a href="https://wa.me/5511983215016?text=Ol%C3%A1%2C%20equipe%20do%20Mercato%20Jardim!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener" class="btn-lemon-cta">
           Pedir no WhatsApp →
         </a>
       </div>
+
     </div>
   </header>
 
-  <!-- Hero Section with Cart Drop Animation -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-grid">
-      <div class="hero-text-content">
-        <div class="hero-pill-badge">
-          <span class="mono-badge">SANTO ANDRÉ · VILA VALPARAÍSO</span>
-          <span class="dot-separator">◆</span>
-          <span class="pill-highlight">100% PET FRIENDLY</span>
+  <!-- Hero Section: Atmosfera Sensorial de Entrada no Mercado -->
+  <section class="wood-hero" id="experiencia">
+    <div class="wood-overlay-texture"></div>
+    <div class="container hero-content-grid">
+      
+      <div class="hero-text-area">
+        <div class="hero-heritage-tag">
+          <span class="lemon-icon">🍋</span>
+          <span class="heritage-text">TRADIÇÃO, ACONCHEGO & SABOR EM SANTO ANDRÉ</span>
         </div>
 
-        <h1 class="hero-title">
-          Conveniência com frescor e afeto. <span class="serif-italic">Para você e seu pet.</span>
+        <h1 class="hero-display-title">
+          Sinta-se em casa. <br>
+          <span class="highlight-italic">O verdadeiro prazer de passear no mercado.</span>
         </h1>
 
-        <p class="hero-description">
-          O primeiro supermercado pet friendly de São Paulo une a agilidade do dia a dia ao cuidado artesanal: hortifrúti fresco colhido de manhã, cortes nobres no açougue, pães de fermentação natural e mercearia fina com entrega via WhatsApp.
+        <p class="hero-body-p">
+          Madeira nobre, aroma de pão quentinho saindo do forno, cítricos colhidos na hora e as melhores safras do mundo na nossa adega. O Mercato Jardim foi planejado para transformar suas compras em um momento de pura celebração para você, sua família e seu pet.
         </p>
 
-        <div class="hero-buttons">
-          <a href="#setores" class="btn-primary hero-cta-btn">
-            Explorar Setores & Produtos →
+        <div class="hero-cta-row">
+          <a href="#corredores" class="btn-primary-wood">
+            <span>🛒</span> Pegar Carrinho & Passear nos Corredores →
           </a>
-          <button class="btn-secondary" id="replayDropAnimationBtn" title="Ver a animação do carrinho de novo">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-            </svg>
-            Animar Carrinho Novamente
-          </button>
+          <a href="#adega" class="btn-wine-link">
+            <span>🍷</span> Conhecer a Adega de Vinhos
+          </a>
         </div>
 
-        <!-- Quick Stats Strip -->
-        <div class="hero-metrics-strip">
-          <div class="metric-block">
-            <span class="metric-num">1º</span>
-            <span class="metric-label">Pet Friendly de SP</span>
+        <!-- Mini Selos de Qualidade -->
+        <div class="heritage-stamps">
+          <div class="stamp-item">
+            <span class="stamp-number">+2.800</span>
+            <span class="stamp-label">Rótulos & Itens Importados</span>
           </div>
-          <div class="metric-divider"></div>
-          <div class="metric-block">
-            <span class="metric-num">2.500+</span>
-            <span class="metric-label">Itens Selecionados</span>
+          <div class="stamp-line"></div>
+          <div class="stamp-item">
+            <span class="stamp-number">100%</span>
+            <span class="stamp-label">Pet Friendly Oficial</span>
           </div>
-          <div class="metric-divider"></div>
-          <div class="metric-block">
-            <span class="metric-num">02</span>
-            <span class="metric-label">Canais de WhatsApp</span>
+          <div class="stamp-line"></div>
+          <div class="stamp-item">
+            <span class="stamp-number">2 Lojas</span>
+            <span class="stamp-label">B. Jardim & Valparaíso</span>
           </div>
         </div>
       </div>
 
-      <!-- Animated Interactive Shopping Cart Stage -->
-      <div class="hero-animation-wrapper">
-        <div class="cart-stage" id="cartStage">
-          <!-- Sky / Drop Zone where items fall from -->
-          <div class="drop-zone" id="dropZone" aria-hidden="true">
-            <!-- Falling items dynamically injected / animated via CSS & JS -->
+      <!-- Vitrine Interativa: O Carrinho do Mercato em Ação -->
+      <div class="hero-cart-interactive-box">
+        <div class="wooden-board-card">
+          <div class="board-header">
+            <div class="lemon-stamp">
+              <span class="lemon-mini">🍋</span>
+              <div>
+                <strong>Cesta Mercato</strong>
+                <span class="sub">Frescor Selecionado</span>
+              </div>
+            </div>
+            <span class="live-status-pill">SELECIONE & EXPERIMENTE</span>
           </div>
 
-          <!-- Shopping Cart Container -->
-          <div class="interactive-cart-card">
-            <div class="cart-header-status">
-              <span class="status-indicator-tag">AO VIVO</span>
-              <span class="cart-status-text">Cesta Mercato em Movimento</span>
-              <span class="cart-counter-chip" id="stageCounterChip">6 itens fresquinhos</span>
-            </div>
-
-            <!-- SVG Cart Visual Illustration -->
-            <div class="cart-visual-container">
-              <div class="cart-basket-overlay" id="cartBasketOverlay">
-                <!-- Items that landed in the cart -->
+          <!-- Área Visual do Carrinho Rústico -->
+          <div class="cart-stage-visual" id="heroCartStage">
+            <div class="drop-simulation-zone" id="heroDropZone"></div>
+            
+            <!-- Ilustração do Carrinho Rústico e Cesta de Vime -->
+            <div class="wood-cart-graphic">
+              <div class="cart-items-floating" id="cartFloatingItems">
+                <!-- Itens caindo e repousando no carrinho -->
               </div>
               
-              <div class="cart-svg-art">
-                <svg viewBox="0 0 340 220" class="cart-svg" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Handle -->
-                  <path d="M 40 40 L 75 55" stroke="#111111" stroke-width="6" stroke-linecap="round"/>
-                  <circle cx="38" cy="38" r="8" fill="#FED401" stroke="#111111" stroke-width="3"/>
-                  
-                  <!-- Main Chassis / Grid Structure -->
-                  <path d="M 75 55 L 260 55 L 235 155 L 105 155 Z" fill="none" stroke="#111111" stroke-width="5" stroke-linejoin="round"/>
-                  <!-- Grid Bars -->
-                  <line x1="85" y1="78" x2="252" y2="78" stroke="#C3C0BA" stroke-width="2.5"/>
-                  <line x1="93" y1="105" x2="245" y2="105" stroke="#C3C0BA" stroke-width="2.5"/>
-                  <line x1="100" y1="130" x2="238" y2="130" stroke="#C3C0BA" stroke-width="2.5"/>
-                  <line x1="115" y1="55" x2="128" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
-                  <line x1="155" y1="55" x2="160" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
-                  <line x1="195" y1="55" x2="190" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
-                  <line x1="230" y1="55" x2="218" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
-
-                  <!-- Bottom Frame & Wheels Base -->
-                  <path d="M 105 155 L 90 185 L 245 185" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
-                  <line x1="235" y1="155" x2="245" y2="185" stroke="#111111" stroke-width="5"/>
-                  
-                  <!-- Wheels with yellow hubs -->
-                  <circle cx="105" cy="195" r="16" fill="#FFFFFF" stroke="#111111" stroke-width="4"/>
-                  <circle cx="105" cy="195" r="7" fill="#FED401"/>
-                  <circle cx="235" cy="195" r="16" fill="#FFFFFF" stroke="#111111" stroke-width="4"/>
-                  <circle cx="235" cy="195" r="7" fill="#FED401"/>
-
-                  <!-- Ground shadow -->
-                  <ellipse cx="170" cy="214" rx="100" ry="6" fill="rgba(17,17,17,0.08)"/>
+              <div class="cart-svg-wrap">
+                <svg viewBox="0 0 320 200" class="rustic-cart-svg" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Cesto de Vime Trançado -->
+                  <path d="M 60 45 L 260 45 L 235 140 L 85 140 Z" fill="#D29964" stroke="#4A2B1D" stroke-width="4"/>
+                  <!-- Textura de Vime -->
+                  <path d="M 75 45 L 95 140 M 115 45 L 125 140 M 155 45 L 155 140 M 195 45 L 185 140 M 235 45 L 215 140" stroke="#B87A42" stroke-width="2.5"/>
+                  <line x1="70" y1="75" x2="250" y2="75" stroke="#B87A42" stroke-width="2"/>
+                  <line x1="80" y1="105" x2="240" y2="105" stroke="#B87A42" stroke-width="2"/>
+                  <!-- Puxador de Madeira -->
+                  <path d="M 35 30 L 60 45" stroke="#4A2B1D" stroke-width="6" stroke-linecap="round"/>
+                  <circle cx="34" cy="28" r="7" fill="#F7CE28" stroke="#4A2B1D" stroke-width="2"/>
+                  <!-- Chassi de Ferro Forjado -->
+                  <path d="M 85 140 L 70 170 L 250 170" fill="none" stroke="#2B1810" stroke-width="5" stroke-linecap="round"/>
+                  <line x1="235" y1="140" x2="250" y2="170" stroke="#2B1810" stroke-width="5"/>
+                  <!-- Rodas Estilo Retrô -->
+                  <circle cx="85" cy="175" r="16" fill="#F9F6F0" stroke="#2B1810" stroke-width="4"/>
+                  <circle cx="85" cy="175" r="6" fill="#F7CE28"/>
+                  <circle cx="235" cy="175" r="16" fill="#F9F6F0" stroke="#2B1810" stroke-width="4"/>
+                  <circle cx="235" cy="175" r="6" fill="#F7CE28"/>
+                  <ellipse cx="160" cy="194" rx="100" ry="5" fill="rgba(43,24,16,0.15)"/>
                 </svg>
               </div>
             </div>
+          </div>
 
-            <!-- Cart Live Hint & Quick Action -->
-            <div class="cart-bottom-actions">
-              <p class="cart-drop-tip">
-                <span class="sparkle-icon">✨</span> <strong>Dica:</strong> Role para baixo para explorar os setores e tocar em qualquer item para colocar na sua cesta!
-              </p>
-              <button class="btn-pill-yellow" id="heroAddToCartCTA">
-                Ver Cesta Atual (<span id="heroCartCount">0</span>) →
-              </button>
+          <!-- Rodapé do Card do Carrinho -->
+          <div class="board-footer">
+            <div class="board-info-tip">
+              <span>💡 Toque nos itens dos corredores abaixo para encher seu carrinho e pedir no WhatsApp!</span>
             </div>
+            <button class="btn-replay-animation" id="replayAnimationBtn">
+              🔄 Animar Novamente
+            </button>
           </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seção Especial da Adega Mob Wine (Destaque marcante no áudio) -->
+  <section class="wine-cellar-section" id="adega">
+    <div class="container">
+      <div class="cellar-banner-card">
+        <div class="cellar-badge">
+          <span class="wine-glass-icon">🍷</span>
+          <span>ADEGA MOB WINE · CURADORIA EXCLUSIVA</span>
+        </div>
+        <h2 class="cellar-title">Uma verdadeira catedral de vinhos no <span class="wine-italic">coração de Santo André</span>.</h2>
+        <p class="cellar-desc">
+          Ambiente climatizado revestido em madeira nobre, com mais de 800 rótulos do Velho e Novo Mundo: safras premiadas da Toscana, Bordeaux, Douro, Mendoza e da Serra Gaúcha, selecionados por sommeliers para você harmonizar com os melhores queijos e cortes do Mercato.
+        </p>
+
+        <div class="wine-features-row">
+          <div class="wine-feature-box">
+            <span class="w-icon">🍾</span>
+            <h4>Degustações Semanais</h4>
+            <p>Todo fim de semana, produtores e sommeliers convidados apresentam novos rótulos.</p>
+          </div>
+          <div class="wine-feature-box">
+            <span class="w-icon">🧀</span>
+            <h4>Harmonização Guiada</h4>
+            <p>Nossa equipe indica a combinação perfeita com queijos finos e embutidos artesanais.</p>
+          </div>
+          <div class="wine-feature-box">
+            <span class="w-icon">❄️</span>
+            <h4>Climatização de Precisão</h4>
+            <p>Temperatura e umidade controladas para preservar a integridade máxima de cada garrafa.</p>
+          </div>
+        </div>
+
+        <div class="cellar-cta-bar">
+          <span class="cellar-promo-text">✨ Vinhos selecionados a partir de R$ 49,90 com entrega rápida via WhatsApp!</span>
+          <button class="btn-wine-cta" id="btnFilterWine">
+            Ver Vinhos na Vitrine →
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pet Friendly Highlight Banner -->
-  <section class="pet-friendly-section" id="pet-friendly">
+  <!-- Corredores do Mercado (A Experiência de Passear no Mercado) -->
+  <section class="aisles-section" id="corredores">
     <div class="container">
-      <div class="pet-card-wrapper">
-        <div class="pet-card-header">
-          <span class="mono-badge">EXPERIÊNCIA ÚNICA EM SANTO ANDRÉ</span>
-          <h2 class="section-title-serif">O primeiro supermercado <span class="serif-italic">pet friendly</span> de verdade.</h2>
-          <p class="section-subtitle">
-            Aqui você nunca precisa deixar seu melhor amigo do lado de fora preso na coleira. Criamos um espaço planejado para acolher famílias completas com conforto, higiene e segurança.
-          </p>
-        </div>
-
-        <div class="pet-features-grid">
-          <div class="pet-feature-item">
-            <div class="feature-icon-box">🛒</div>
-            <h3>Carrinhos Adaptados</h3>
-            <p>Carrinhos especiais com assento acolchoado e cinto de contenção para passear com seu pet pelos corredores.</p>
-          </div>
-
-          <div class="pet-feature-item">
-            <div class="feature-icon-box">💧</div>
-            <h3>Ponto de Hidratação</h3>
-            <p>Água fresca filtrada e potes higienizados sempre à disposição logo na entrada do mercado.</p>
-          </div>
-
-          <div class="pet-feature-item">
-            <div class="feature-icon-box">🦴</div>
-            <h3>Petiscaria & Mimos</h3>
-            <p>Biscoitinhos artesanais cortesia na entrada e uma gôndola completa de petiscos naturais e rações nobres.</p>
-          </div>
-
-          <div class="pet-feature-item">
-            <div class="feature-icon-box">✨</div>
-            <h3>Protocolo Sanitário Rigoroso</h3>
-            <p>Higienização constante de carrinhos e áreas com produtos atóxicos e seguros para os animais e alimentos.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Sectors Showcase Section -->
-  <section class="sectors-section" id="setores">
-    <div class="container">
-      <div class="section-heading-editorial">
-        <span class="mono-badge">CONHEÇA NOSSOS CORREDORES</span>
-        <h2 class="section-title-serif">Um setor para cada momento do seu <span class="serif-italic">dia a dia</span>.</h2>
-        <p class="section-subtitle">
-          Clique nas abas abaixo para explorar os produtos frescos de cada área. Você pode adicionar itens à sua cesta com um clique e finalizar o pedido no WhatsApp!
+      
+      <div class="aisles-header-text">
+        <span class="wood-badge-pill">PASSEIO PELOS CORREDORES</span>
+        <h2 class="wood-section-title">O que você gostaria de levar <span class="wood-italic">hoje</span>?</h2>
+        <p class="wood-section-sub">
+          Explore as bancadas do Mercato Jardim. Clique em <strong>+ Colocar na Cesta</strong> em qualquer produto e monte sua lista de compras para receber em casa ou retirar pronto na loja.
         </p>
       </div>
 
-      <!-- Sector Navigation Tabs (Style PEG-AI) -->
-      <div class="sectors-tabs-nav" role="tablist" aria-label="Setores do Mercado">
-        <button class="sector-tab-btn active" data-sector="hortifruti" role="tab" aria-selected="true" id="tab-hortifruti">
-          <span class="tab-index">01</span>
-          <span class="tab-title">Hortifrúti Fresco</span>
-          <span class="tab-tag">Direto do Produtor</span>
+      <!-- Seletor de Corredores / Abas de Madeira -->
+      <div class="aisle-tabs-wood" role="tablist">
+        <button class="aisle-tab-btn active" data-corredor="adega" role="tab" aria-selected="true">
+          <span class="aisle-icon">🍷</span>
+          <div class="aisle-btn-info">
+            <span class="aisle-num">Corredor 01</span>
+            <strong class="aisle-name">Adega & Mob Wine</strong>
+          </div>
         </button>
 
-        <button class="sector-tab-btn" data-sector="acougue" role="tab" aria-selected="false" id="tab-acougue">
-          <span class="tab-index">02</span>
-          <span class="tab-title">Açougue & Carnes</span>
-          <span class="tab-tag">Cortes Nobres</span>
+        <button class="aisle-tab-btn" data-corredor="hortifruti" role="tab" aria-selected="false">
+          <span class="aisle-icon">🍋</span>
+          <div class="aisle-btn-info">
+            <span class="aisle-num">Corredor 02</span>
+            <strong class="aisle-name">Hortifrúti & Citrus</strong>
+          </div>
         </button>
 
-        <button class="sector-tab-btn" data-sector="padaria" role="tab" aria-selected="false" id="tab-padaria">
-          <span class="tab-index">03</span>
-          <span class="tab-title">Padaria & Pães</span>
-          <span class="tab-tag">Fornadas Quentes</span>
+        <button class="aisle-tab-btn" data-corredor="acougue" role="tab" aria-selected="false">
+          <span class="aisle-icon">🥩</span>
+          <div class="aisle-btn-info">
+            <span class="aisle-num">Corredor 03</span>
+            <strong class="aisle-name">Açougue Gourmet</strong>
+          </div>
         </button>
 
-        <button class="sector-tab-btn" data-sector="mercearia" role="tab" aria-selected="false" id="tab-mercearia">
-          <span class="tab-index">04</span>
-          <span class="tab-title">Mercearia & Empório</span>
-          <span class="tab-tag">Marcas Essenciais</span>
+        <button class="aisle-tab-btn" data-corredor="padaria" role="tab" aria-selected="false">
+          <span class="aisle-icon">🥖</span>
+          <div class="aisle-btn-info">
+            <span class="aisle-num">Corredor 04</span>
+            <strong class="aisle-name">Padaria Artesanal</strong>
+          </div>
         </button>
 
-        <button class="sector-tab-btn" data-sector="petadega" role="tab" aria-selected="false" id="tab-petadega">
-          <span class="tab-index">05</span>
-          <span class="tab-title">Espaço Pet & Adega</span>
-          <span class="tab-tag">Vinhos & Mimos</span>
+        <button class="aisle-tab-btn" data-corredor="mercearia" role="tab" aria-selected="false">
+          <span class="aisle-icon">🥫</span>
+          <div class="aisle-btn-info">
+            <span class="aisle-num">Corredor 05</span>
+            <strong class="aisle-name">Mercearia & Empório</strong>
+          </div>
+        </button>
+
+        <button class="aisle-tab-btn" data-corredor="pet" role="tab" aria-selected="false">
+          <span class="aisle-icon">🐾</span>
+          <div class="aisle-btn-info">
+            <span class="aisle-num">Corredor 06</span>
+            <strong class="aisle-name">Espaço Pet Friendly</strong>
+          </div>
         </button>
       </div>
 
-      <!-- Sector Info Highlight Card -->
-      <div class="sector-banner-card" id="sectorBanner">
-        <div class="sector-banner-left">
-          <span class="sector-tag-pill" id="sectorPillTag">SETOR 01 · FRESCO & ORGÂNICO</span>
-          <h3 class="sector-banner-title" id="sectorBannerTitle">Hortifrúti & Feira Selecionada</h3>
-          <p class="sector-banner-desc" id="sectorBannerDesc">
-            Frutas doces, legumes higienizados e verduras selecionadas manualmente todas as manhãs. A garantia da maçã crocante e da laranja suculenta na sua mesa.
+      <!-- Ambientação da Bancada Ativa -->
+      <div class="corredor-banner" id="corredorBanner">
+        <div class="corredor-banner-text">
+          <span class="corredor-tag" id="corredorTag">ADEGA MOB WINE · SELEÇÃO INTERNACIONAL</span>
+          <h3 class="corredor-title" id="corredorTitle">Vinhos Nobres, Espumantes & Queijos Especiais</h3>
+          <p class="corredor-desc" id="corredorDesc">
+            Rótulos exclusivos com curadoria de sommeliers. Tintos encorpados, brancos minerais, espumantes e queijos curados para acompanhar momentos memoráveis.
           </p>
         </div>
-        <div class="sector-banner-right">
-          <div class="sector-stats-box">
-            <span class="stat-highlight">100%</span>
-            <span class="stat-detail">Frescor auditado diariamente</span>
-          </div>
+        <div class="corredor-atmosphere-badge">
+          <span class="badge-icon" id="corredorBadgeIcon">🍷</span>
+          <span class="badge-sub">Curadoria Mercato Jardim</span>
         </div>
       </div>
 
-      <!-- Products Grid Display -->
-      <div class="products-showcase-grid" id="productsGrid">
-        <!-- Injected via JavaScript based on active sector -->
+      <!-- Grid de Produtos da Bancada -->
+      <div class="products-bancada-grid" id="productsGrid">
+        <!-- Injetado dinamicamente via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Atrações Culturais & Gastronômicas do Mercato -->
+  <section class="attractions-section" id="atracoes">
+    <div class="container">
+      <div class="attractions-heading">
+        <span class="wood-badge-pill">MAIS QUE UM SUPERMERCADO</span>
+        <h2 class="wood-section-title">Um ponto de encontro com <span class="wood-italic">muitas atrações</span>.</h2>
+        <p class="wood-section-sub">
+          O Mercato Jardim foi feito para ser vivido. Aqui você faz suas compras com calma ao som de boa música, aproveita festivais gastronômicos e toma um café especial com quem você ama.
+        </p>
+      </div>
+
+      <div class="attractions-cards-grid">
+        
+        <div class="attraction-card">
+          <div class="attraction-img-tag">🎶 MÚSICA AO VIVO</div>
+          <div class="attraction-icon">🎷</div>
+          <h3>Jazz & Bossa no Empório</h3>
+          <p>Apresentações acústicas aos sábados e domingos para transformar o passeio no mercado em um momento leve e aconchegante.</p>
+          <span class="attraction-schedule">Todo sábado e domingo · Das 12h às 16h</span>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-img-tag">🍷 SOMMELIER PRESENCIAL</div>
+          <div class="attraction-icon">🍇</div>
+          <h3>Festival de Degustação</h3>
+          <p>Experimente novos rótulos de vinhos, azeites extravirgens e queijos artesanais com orientação gratuita de especialistas.</p>
+          <span class="attraction-schedule">Quintas e Sextas · Das 17h às 20h</span>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-img-tag">🥩 PARRILLA & FOGO</div>
+          <div class="attraction-icon">🔥</div>
+          <h3>Boutique de Carnes na Brasa</h3>
+          <p>Escolha seu corte no açougue nobre e leve assado na hora no ponto que preferir para saborear no almoço em família.</p>
+          <span class="attraction-schedule">Finais de semana e feriados</span>
+        </div>
+
+        <div class="attraction-card">
+          <div class="attraction-img-tag">☕ CAFETERIA & DOCES</div>
+          <div class="attraction-icon">🥐</div>
+          <h3>Espaço Café & Pâtisserie</h3>
+          <p>Grãos especiais moídos na hora, cappuccinos cremosos, pães de queijo e doces tradicionais para uma pausa deliciosa.</p>
+          <span class="attraction-schedule">Aberto todos os dias a partir das 07h30</span>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Institutional / How it works Section -->
-  <section class="experience-section" id="diferenciais">
+  <!-- Espaço Pet Friendly (O Primeiro de SP) -->
+  <section class="pet-friendly-wood-section" id="pet-friendly">
     <div class="container">
-      <div class="experience-grid">
-        <div class="experience-content">
-          <span class="mono-badge">COMO FUNCIONA O ATENDIMENTO</span>
-          <h2 class="section-title-serif">A simplicidade de pedir no <span class="serif-italic">WhatsApp</span>.</h2>
-          <p class="section-body">
-            Fazer compras no Mercato Jardim é tão natural quanto conversar com quem você conhece. Monte sua cesta pelo site, envie para nossa equipe e receba fotos dos cortes e frutas antes de confirmar.
+      <div class="pet-friendly-wood-box">
+        <div class="pet-wood-left">
+          <span class="pet-badge-gold">🐾 PIONEIRISMO EM SÃO PAULO</span>
+          <h2 class="pet-title-serif">O primeiro supermercado <span class="highlight-lemon">100% pet friendly</span>.</h2>
+          <p class="pet-p">
+            No Mercato Jardim, seu cachorro ou gato não fica amarrado do lado de fora esperando na calçada. Aqui ele entra com você, tem carrinho acolchoado exclusivo com cinto de segurança, bebedouro de água fresca na entrada e petiscos naturais de cortesia.
           </p>
 
-          <div class="workflow-steps-list">
-            <div class="workflow-step">
-              <span class="step-circle">01</span>
-              <div class="step-text">
-                <h4>Monte sua cesta no site</h4>
-                <p>Navegue pelos setores e clique em <em>+ Adicionar</em> nos produtos que deseja.</p>
-              </div>
+          <div class="pet-perks-list">
+            <div class="pet-perk">
+              <span class="perk-check">✔</span>
+              <span>Carrinhos de compras adaptados e higienizados a cada uso</span>
             </div>
-
-            <div class="workflow-step">
-              <span class="step-circle">02</span>
-              <div class="step-text">
-                <h4>Envie sua lista com 1 clique</h4>
-                <p>O sistema organiza seu pedido certinho e abre a conversa oficial no WhatsApp.</p>
-              </div>
+            <div class="pet-perk">
+              <span class="perk-check">✔</span>
+              <span>Ponto de hidratação com água purificada na entrada</span>
             </div>
-
-            <div class="workflow-step">
-              <span class="step-circle">03</span>
-              <div class="step-text">
-                <h4>Confirmação em tempo real</h4>
-                <p>Nossa equipe confere o ponto da carne, o frescor das frutas e combina a entrega rápida.</p>
-              </div>
+            <div class="pet-perk">
+              <span class="perk-check">✔</span>
+              <span>Biscoitinhos artesanais grátis oferecidos pela nossa equipe</span>
+            </div>
+            <div class="pet-perk">
+              <span class="perk-check">✔</span>
+              <span>Corredor exclusivo com petiscos naturais e rações nobres</span>
             </div>
           </div>
         </div>
 
-        <div class="experience-card-highlight">
-          <div class="card-inner-box">
-            <div class="badge-accent">◆ COMPRA PERSONALIZADA</div>
-            <h3 class="box-title">Dois números dedicados para atender você</h3>
-            <p class="box-desc">Sem robôs complicados. Atendimento humano, atencioso e pronto para separar as melhores peças para você.</p>
-            
-            <div class="whatsapp-contact-cards">
-              <a href="https://wa.me/5511983215016?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Mercato%20Jardim" target="_blank" rel="noopener" class="wa-contact-pill">
-                <span class="wa-dot"></span>
-                <div class="wa-info">
-                  <span class="wa-channel">WhatsApp Principal · Loja</span>
-                  <strong class="wa-number">(11) 98321-5016</strong>
-                </div>
-                <span class="wa-arrow">→</span>
-              </a>
-
-              <a href="https://wa.me/5511973668877?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Mercato%20Jardim" target="_blank" rel="noopener" class="wa-contact-pill">
-                <span class="wa-dot"></span>
-                <div class="wa-info">
-                  <span class="wa-channel">WhatsApp Linha Direta · Delivery</span>
-                  <strong class="wa-number">(11) 97366-8877</strong>
-                </div>
-                <span class="wa-arrow">→</span>
-              </a>
-            </div>
-
-            <div class="box-footer-note">
-              <span>⚡ Tempo médio de resposta: <strong>menos de 5 minutos</strong></span>
-            </div>
+        <div class="pet-wood-right">
+          <div class="pet-card-stamp">
+            <div class="pet-big-emoji">🐕 🛒 🐈</div>
+            <h3>Família Completa</h3>
+            <p>Traga a coleira e viva a experiência de passear no mercado juntos sem pressa.</p>
+            <div class="pet-hashtag">#PetFriendlyDeVerdade</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Location & Map Section -->
-  <section class="location-section" id="localizacao">
+  <!-- As Duas Unidades em Santo André -->
+  <section class="stores-section" id="unidades">
     <div class="container">
-      <div class="location-card">
-        <div class="location-details">
-          <span class="mono-badge">VENHA NOS CONHECER PESSOALMENTE</span>
-          <h2 class="section-title-serif">Fácil localização na <span class="serif-italic">Vila Valparaíso</span>.</h2>
-          <p class="location-address-p">
+      <div class="stores-heading">
+        <span class="wood-badge-pill">NOSSAS CASAS</span>
+        <h2 class="wood-section-title">Escolha a loja mais <span class="wood-italic">perto de você</span>.</h2>
+        <p class="wood-section-sub">Duas lojas acolhedoras em Santo André com estacionamento gratuito, açougue, padaria, adega e atendimento atencioso.</p>
+      </div>
+
+      <div class="stores-grid">
+        
+        <!-- Loja 1: Bairro Jardim -->
+        <div class="store-card">
+          <div class="store-badge-header">
+            <span class="store-flag">LOJA 01 · BAIRRO JARDIM</span>
+            <span class="store-status">Aberto Agora</span>
+          </div>
+          <h3 class="store-name">Unidade Bairro Jardim</h3>
+          <p class="store-address">
+            <strong>Rua das Esmeraldas, 379</strong><br>
+            Bairro Jardim · Santo André - SP<br>
+            <span class="store-amenities">Estacionamento com manobrista · Cafeteria no local</span>
+          </p>
+
+          <div class="store-hours">
+            <div>Segunda a Sábado: <strong>07h30 às 21h00</strong></div>
+            <div>Domingos e Feriados: <strong>08h00 às 18h00</strong></div>
+          </div>
+
+          <div class="store-actions">
+            <a href="https://maps.google.com/?q=Rua+das+Esmeraldas+379+Bairro+Jardim+Santo+Andre" target="_blank" rel="noopener" class="btn-store-map">
+              Google Maps →
+            </a>
+            <a href="https://waze.com/ul?q=Rua+das+Esmeraldas+379+Santo+Andre" target="_blank" rel="noopener" class="btn-store-waze">
+              Waze
+            </a>
+            <a href="https://wa.me/5511983215016?text=Ol%C3%A1%2C%20falo%20da%20Loja%20Bairro%20Jardim!" target="_blank" rel="noopener" class="btn-store-wa">
+              WhatsApp Loja 1
+            </a>
+          </div>
+        </div>
+
+        <!-- Loja 2: Vila Valparaíso -->
+        <div class="store-card">
+          <div class="store-badge-header">
+            <span class="store-flag">LOJA 02 · VILA VALPARAÍSO</span>
+            <span class="store-status">Aberto Agora</span>
+          </div>
+          <h3 class="store-name">Unidade Valparaíso</h3>
+          <p class="store-address">
             <strong>Rua Piracicaba, 244</strong><br>
             Vila Valparaíso · Santo André - SP<br>
-            <span class="cep-note">Estacionamento conveniente no local & rampa acessível para pets</span>
+            <span class="store-amenities">Amplo estacionamento · Fácil acesso · Pet Friendly</span>
           </p>
 
-          <div class="hours-box">
-            <h4 class="hours-title">Horário de Funcionamento:</h4>
-            <div class="hours-row">
-              <span>Segunda a Sábado:</span>
-              <strong>07h30 às 20h30</strong>
-            </div>
-            <div class="hours-row">
-              <span>Domingos e Feriados:</span>
-              <strong>08h00 às 14h00</strong>
-            </div>
+          <div class="store-hours">
+            <div>Segunda a Sábado: <strong>07h30 às 20h30</strong></div>
+            <div>Domingos e Feriados: <strong>08h00 às 14h00</strong></div>
           </div>
 
-          <div class="location-cta-group">
-            <a href="https://maps.google.com/?q=Rua+Piracicaba+244+Vila+Valparaiso+Santo+Andre+SP" target="_blank" rel="noopener" class="btn-primary">
-              Abrir no Google Maps →
+          <div class="store-actions">
+            <a href="https://maps.google.com/?q=Rua+Piracicaba+244+Vila+Valparaiso+Santo+Andre" target="_blank" rel="noopener" class="btn-store-map">
+              Google Maps →
             </a>
-            <a href="https://waze.com/ul?q=Rua+Piracicaba+244+Santo+Andre" target="_blank" rel="noopener" class="btn-secondary">
-              Abrir no Waze
+            <a href="https://waze.com/ul?q=Rua+Piracicaba+244+Santo+Andre" target="_blank" rel="noopener" class="btn-store-waze">
+              Waze
+            </a>
+            <a href="https://wa.me/5511973668877?text=Ol%C3%A1%2C%20falo%20da%20Loja%20Valpara%C3%ADso!" target="_blank" rel="noopener" class="btn-store-wa">
+              WhatsApp Loja 2
             </a>
           </div>
         </div>
 
-        <div class="location-visual-map">
-          <div class="map-aesthetic-frame">
-            <div class="map-pin-overlay">
-              <div class="map-pulse-marker"></div>
-              <div class="map-tooltip">
-                <strong>Mercato Jardim 🐾</strong>
-                <span>Rua Piracicaba, 244</span>
-              </div>
-            </div>
-            <!-- Stylized Minimal Map Background SVG -->
-            <svg class="map-svg-grid" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="320" fill="#ECE6D8"/>
-              <!-- Grid Roads -->
-              <path d="M 0 80 L 400 80" stroke="#FFFFFF" stroke-width="12"/>
-              <path d="M 0 200 L 400 220" stroke="#FFFFFF" stroke-width="16"/>
-              <path d="M 120 0 L 140 320" stroke="#FFFFFF" stroke-width="14"/>
-              <path d="M 280 0 L 260 320" stroke="#FFFFFF" stroke-width="18"/>
-              <path d="M 40 140 Q 200 160 360 110" stroke="#FED401" stroke-width="8" stroke-dasharray="6,6"/>
-              
-              <!-- Street Labels -->
-              <text x="15" y="70" font-family="'Inter Tight', sans-serif" font-size="11" fill="#88857F" font-weight="600">R. PIRACICABA</text>
-              <text x="145" y="25" font-family="'Inter Tight', sans-serif" font-size="11" fill="#88857F" font-weight="600">AV. ATLÂNTICA</text>
-              <text x="275" y="300" font-family="'Inter Tight', sans-serif" font-size="11" fill="#88857F" font-weight="600">VILA VALPARAÍSO</text>
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Slide-Over Shopping Cart Drawer -->
-  <div class="cart-drawer-backdrop" id="cartBackdrop" aria-hidden="true"></div>
-  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle" aria-hidden="true">
-    <div class="cart-drawer-header">
-      <div class="cart-title-wrapper">
-        <h3 id="cartDrawerTitle" class="cart-drawer-title">Sua Cesta Mercato</h3>
-        <span class="cart-drawer-subtitle" id="drawerItemCount">0 itens adicionados</span>
+  <!-- Slide-Over Shopping Basket Drawer -->
+  <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer-wood" id="cartDrawer" role="dialog" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer-wood-header">
+      <div class="drawer-title-group">
+        <span class="lemon-icon">🍋</span>
+        <div>
+          <h3 id="drawerTitle">Sua Cesta Mercato</h3>
+          <span class="drawer-count" id="drawerItemCount">0 itens adicionados</span>
+        </div>
       </div>
-      <button class="btn-close-drawer" id="closeCartBtn" aria-label="Fechar carrinho">✕</button>
+      <button class="btn-drawer-close" id="closeCartBtn" aria-label="Fechar cesta">✕</button>
     </div>
 
     <!-- Empty State -->
-    <div class="cart-empty-state" id="cartEmptyState">
-      <div class="empty-icon">🧺</div>
+    <div class="drawer-empty-state" id="cartEmptyState">
+      <div class="empty-basket-icon">🧺</div>
       <h4>Sua cesta ainda está vazia</h4>
-      <p>Navegue pelos setores e clique em <strong>+ Adicionar</strong> para montar sua lista de compras.</p>
-      <button class="btn-secondary" id="emptyCartExploreBtn">Explorar Produtos Agora →</button>
+      <p>Passeie pelos corredores e clique em <strong>+ Colocar na Cesta</strong> para montar seu pedido com vinhos, frutas e cortes frescos.</p>
+      <button class="btn-wood-browse" id="emptyCartBrowseBtn">Passear pelos Corredores →</button>
     </div>
 
-    <!-- Cart Item List -->
-    <div class="cart-items-list" id="cartItemsList">
-      <!-- Items dynamically rendered here -->
+    <!-- Items List -->
+    <div class="drawer-items-list" id="cartItemsList">
+      <!-- Itens gerados dinamicamente via JS -->
     </div>
 
-    <!-- Cart Footer with WhatsApp Checkout -->
-    <div class="cart-drawer-footer" id="cartDrawerFooter">
-      <div class="cart-summary-line">
-        <span>Total de Itens:</span>
-        <strong id="cartSummaryTotal">0 produtos</strong>
+    <!-- Drawer Footer com Checkout no WhatsApp -->
+    <div class="drawer-wood-footer" id="cartDrawerFooter">
+      <div class="drawer-summary-row">
+        <span>Total de Produtos:</span>
+        <strong id="cartSummaryTotal">0 itens</strong>
       </div>
-      <p class="cart-checkout-disclaimer">
-        Ao clicar abaixo, sua lista será formatada e enviada diretamente para o WhatsApp oficial do Mercato Jardim.
+      <p class="drawer-disclaimer">
+        Ao clicar abaixo, sua lista é enviada direto para os atendentes do Mercato Jardim no WhatsApp para separação e entrega.
       </p>
 
-      <div class="checkout-actions">
-        <a href="#" id="checkoutWaBtn" class="btn-primary checkout-btn" target="_blank" rel="noopener">
+      <div class="drawer-buttons-column">
+        <a href="#" id="checkoutWaBtn" class="btn-lemon-checkout" target="_blank" rel="noopener">
           Enviar Pedido pelo WhatsApp →
         </a>
-        <button class="btn-text-clear" id="clearCartBtn">Limpar cesta</button>
+        <button class="btn-clear-cart" id="clearCartBtn">Esvaziar cesta</button>
       </div>
     </div>
   </aside>
 
   <!-- Toast Notification -->
-  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
-    <span class="toast-icon">✨</span>
-    <span class="toast-message" id="toastMessage">Item adicionado à cesta!</span>
+  <div class="wood-toast" id="toastNotification" role="status" aria-live="polite">
+    <span class="toast-lemon">🍋</span>
+    <span class="toast-text" id="toastMessage">Produto colocado na cesta!</span>
   </div>
 
-  <!-- Footer -->
-  <footer class="main-footer">
-    <div class="container footer-content">
-      <div class="footer-brand-col">
-        <div class="footer-logo">M·J</div>
-        <h3 class="footer-title">Mercato Jardim</h3>
-        <p class="footer-bio">
-          O primeiro supermercado pet friendly de São Paulo. Qualidade de feira, cortes nobres, padaria com fermentação natural e carinho especial com seu animalzinho.
+  <!-- Footer Rústico e Sofisticado -->
+  <footer class="wood-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-info">
+        <div class="footer-logo-row">
+          <span class="footer-lemon-icon">🍋</span>
+          <span class="footer-brand-name">MERCATO JARDIM</span>
+        </div>
+        <p class="footer-desc">
+          O prazer autêntico de estar no mercado. Hortifrúti rigorosamente selecionado, carnes de primeira, adega de vinhos Mob Wine e o primeiro supermercado pet friendly de São Paulo.
         </p>
-        <span class="footer-meta">Santo André · Vila Valparaíso · SP</span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/mercatojardim/" target="_blank" rel="noopener" class="social-link">
+            Instagram: @mercatojardim ↗
+          </a>
+        </div>
       </div>
 
-      <div class="footer-links-col">
-        <span class="footer-col-title">Setores</span>
-        <ul class="footer-links">
-          <li><a href="#setores" class="footer-link" data-goto="hortifruti">Hortifrúti & Orgânicos</a></li>
-          <li><a href="#setores" class="footer-link" data-goto="acougue">Açougue & Carnes Nobres</a></li>
-          <li><a href="#setores" class="footer-link" data-goto="padaria">Padaria & Confeitaria</a></li>
-          <li><a href="#setores" class="footer-link" data-goto="mercearia">Mercearia & Empório</a></li>
-          <li><a href="#setores" class="footer-link" data-goto="petadega">Espaço Pet & Adega</a></li>
+      <div class="footer-nav-col">
+        <h4>Corredores</h4>
+        <ul>
+          <li><a href="#corredores" data-switch="adega">Adega Mob Wine</a></li>
+          <li><a href="#corredores" data-switch="hortifruti">Hortifrúti & Limão Siciliano</a></li>
+          <li><a href="#corredores" data-switch="acougue">Açougue Gourmet</a></li>
+          <li><a href="#corredores" data-switch="padaria">Padaria & Confeitaria</a></li>
+          <li><a href="#corredores" data-switch="mercearia">Mercearia Fina</a></li>
+          <li><a href="#corredores" data-switch="pet">Espaço Pet Friendly</a></li>
         </ul>
       </div>
 
-      <div class="footer-links-col">
-        <span class="footer-col-title">Contatos Rápidos</span>
-        <ul class="footer-links">
-          <li><a href="https://wa.me/5511983215016" target="_blank" rel="noopener" class="footer-link">WhatsApp 1: (11) 98321-5016</a></li>
-          <li><a href="https://wa.me/5511973668877" target="_blank" rel="noopener" class="footer-link">WhatsApp 2: (11) 97366-8877</a></li>
-          <li><a href="#localizacao" class="footer-link">Rua Piracicaba, 244</a></li>
-          <li><span class="footer-link-static">Estacionamento Gratuito</span></li>
+      <div class="footer-nav-col">
+        <h4>Nossas Lojas</h4>
+        <ul>
+          <li><strong>Loja 1:</strong> R. das Esmeraldas, 379 - Bairro Jardim</li>
+          <li><strong>Loja 2:</strong> R. Piracicaba, 244 - Vila Valparaíso</li>
+          <li><a href="https://wa.me/5511983215016" target="_blank" rel="noopener">WhatsApp Loja 1: (11) 98321-5016</a></li>
+          <li><a href="https://wa.me/5511973668877" target="_blank" rel="noopener">WhatsApp Loja 2: (11) 97366-8877</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="container footer-bottom-bar">
-      <p>© 2026 Mercato Jardim. Todos os direitos reservados. Identidade visual inspirada na excelência e design contemporâneo.</p>
-      <div class="footer-bottom-badges">
-        <span class="badge-mini">100% Pet Friendly</span>
-        <span class="badge-mini">Santo André · SP</span>
+    <div class="container footer-bottom">
+      <p>© 2026 Mercato Jardim. Todos os direitos reservados. Santo André - SP.</p>
+      <div class="footer-badges">
+        <span>🍋 Limão Siciliano & Madeira Nobre</span>
+        <span>🍷 Adega Mob Wine</span>
+        <span>🐾 100% Pet Friendly</span>
       </div>
     </div>
   </footer>
