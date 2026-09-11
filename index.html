@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercato Jardim · O Primeiro Supermercado Pet Friendly de São Paulo</title>
+  <meta name="description" content="Mercato Jardim em Santo André. Hortifrúti selecionado, açougue nobre, padaria artesanal e empório em um espaço 100% pet friendly. Peça pelo WhatsApp!">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+
+  <!-- Google Fonts: Fraunces, Inter Tight, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container announcement-content">
+      <span class="badge-status">
+        <span class="status-pulse"></span> Aberto Agora em Santo André
+      </span>
+      <span class="announcement-text">
+        🐾 Traga seu pet para fazer compras junto com você · Carrinhos adaptados & petiscos na entrada
+      </span>
+      <a href="#localizacao" class="announcement-link">Ver como chegar →</a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="main-header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Mercato Jardim Página Inicial">
+        <span class="brand-mark">M·J</span>
+        <div class="brand-info">
+          <span class="brand-name">Mercato Jardim</span>
+          <span class="brand-tagline">Supermercado & Empório Pet Friendly</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#setores" class="nav-item">Setores</a>
+        <a href="#pet-friendly" class="nav-item">Espaço Pet</a>
+        <a href="#diferenciais" class="nav-item">Diferenciais</a>
+        <a href="#localizacao" class="nav-item">Localização</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Floating Cart Trigger Button -->
+        <button class="cart-trigger-btn" id="openCartBtn" aria-label="Abrir carrinho de compras">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+          <span class="cart-btn-label">Cesta</span>
+        </button>
+
+        <a href="https://wa.me/5511983215016?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20no%20Mercato%20Jardim!" target="_blank" rel="noopener" class="btn-primary">
+          Pedir no WhatsApp →
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Cart Drop Animation -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-pill-badge">
+          <span class="mono-badge">SANTO ANDRÉ · VILA VALPARAÍSO</span>
+          <span class="dot-separator">◆</span>
+          <span class="pill-highlight">100% PET FRIENDLY</span>
+        </div>
+
+        <h1 class="hero-title">
+          Conveniência com frescor e afeto. <span class="serif-italic">Para você e seu pet.</span>
+        </h1>
+
+        <p class="hero-description">
+          O primeiro supermercado pet friendly de São Paulo une a agilidade do dia a dia ao cuidado artesanal: hortifrúti fresco colhido de manhã, cortes nobres no açougue, pães de fermentação natural e mercearia fina com entrega via WhatsApp.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#setores" class="btn-primary hero-cta-btn">
+            Explorar Setores & Produtos →
+          </a>
+          <button class="btn-secondary" id="replayDropAnimationBtn" title="Ver a animação do carrinho de novo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            Animar Carrinho Novamente
+          </button>
+        </div>
+
+        <!-- Quick Stats Strip -->
+        <div class="hero-metrics-strip">
+          <div class="metric-block">
+            <span class="metric-num">1º</span>
+            <span class="metric-label">Pet Friendly de SP</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-block">
+            <span class="metric-num">2.500+</span>
+            <span class="metric-label">Itens Selecionados</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-block">
+            <span class="metric-num">02</span>
+            <span class="metric-label">Canais de WhatsApp</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Interactive Shopping Cart Stage -->
+      <div class="hero-animation-wrapper">
+        <div class="cart-stage" id="cartStage">
+          <!-- Sky / Drop Zone where items fall from -->
+          <div class="drop-zone" id="dropZone" aria-hidden="true">
+            <!-- Falling items dynamically injected / animated via CSS & JS -->
+          </div>
+
+          <!-- Shopping Cart Container -->
+          <div class="interactive-cart-card">
+            <div class="cart-header-status">
+              <span class="status-indicator-tag">AO VIVO</span>
+              <span class="cart-status-text">Cesta Mercato em Movimento</span>
+              <span class="cart-counter-chip" id="stageCounterChip">6 itens fresquinhos</span>
+            </div>
+
+            <!-- SVG Cart Visual Illustration -->
+            <div class="cart-visual-container">
+              <div class="cart-basket-overlay" id="cartBasketOverlay">
+                <!-- Items that landed in the cart -->
+              </div>
+              
+              <div class="cart-svg-art">
+                <svg viewBox="0 0 340 220" class="cart-svg" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Handle -->
+                  <path d="M 40 40 L 75 55" stroke="#111111" stroke-width="6" stroke-linecap="round"/>
+                  <circle cx="38" cy="38" r="8" fill="#FED401" stroke="#111111" stroke-width="3"/>
+                  
+                  <!-- Main Chassis / Grid Structure -->
+                  <path d="M 75 55 L 260 55 L 235 155 L 105 155 Z" fill="none" stroke="#111111" stroke-width="5" stroke-linejoin="round"/>
+                  <!-- Grid Bars -->
+                  <line x1="85" y1="78" x2="252" y2="78" stroke="#C3C0BA" stroke-width="2.5"/>
+                  <line x1="93" y1="105" x2="245" y2="105" stroke="#C3C0BA" stroke-width="2.5"/>
+                  <line x1="100" y1="130" x2="238" y2="130" stroke="#C3C0BA" stroke-width="2.5"/>
+                  <line x1="115" y1="55" x2="128" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
+                  <line x1="155" y1="55" x2="160" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
+                  <line x1="195" y1="55" x2="190" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
+                  <line x1="230" y1="55" x2="218" y2="155" stroke="#C3C0BA" stroke-width="2.5"/>
+
+                  <!-- Bottom Frame & Wheels Base -->
+                  <path d="M 105 155 L 90 185 L 245 185" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+                  <line x1="235" y1="155" x2="245" y2="185" stroke="#111111" stroke-width="5"/>
+                  
+                  <!-- Wheels with yellow hubs -->
+                  <circle cx="105" cy="195" r="16" fill="#FFFFFF" stroke="#111111" stroke-width="4"/>
+                  <circle cx="105" cy="195" r="7" fill="#FED401"/>
+                  <circle cx="235" cy="195" r="16" fill="#FFFFFF" stroke="#111111" stroke-width="4"/>
+                  <circle cx="235" cy="195" r="7" fill="#FED401"/>
+
+                  <!-- Ground shadow -->
+                  <ellipse cx="170" cy="214" rx="100" ry="6" fill="rgba(17,17,17,0.08)"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Cart Live Hint & Quick Action -->
+            <div class="cart-bottom-actions">
+              <p class="cart-drop-tip">
+                <span class="sparkle-icon">✨</span> <strong>Dica:</strong> Role para baixo para explorar os setores e tocar em qualquer item para colocar na sua cesta!
+              </p>
+              <button class="btn-pill-yellow" id="heroAddToCartCTA">
+                Ver Cesta Atual (<span id="heroCartCount">0</span>) →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pet Friendly Highlight Banner -->
+  <section class="pet-friendly-section" id="pet-friendly">
+    <div class="container">
+      <div class="pet-card-wrapper">
+        <div class="pet-card-header">
+          <span class="mono-badge">EXPERIÊNCIA ÚNICA EM SANTO ANDRÉ</span>
+          <h2 class="section-title-serif">O primeiro supermercado <span class="serif-italic">pet friendly</span> de verdade.</h2>
+          <p class="section-subtitle">
+            Aqui você nunca precisa deixar seu melhor amigo do lado de fora preso na coleira. Criamos um espaço planejado para acolher famílias completas com conforto, higiene e segurança.
+          </p>
+        </div>
+
+        <div class="pet-features-grid">
+          <div class="pet-feature-item">
+            <div class="feature-icon-box">🛒</div>
+            <h3>Carrinhos Adaptados</h3>
+            <p>Carrinhos especiais com assento acolchoado e cinto de contenção para passear com seu pet pelos corredores.</p>
+          </div>
+
+          <div class="pet-feature-item">
+            <div class="feature-icon-box">💧</div>
+            <h3>Ponto de Hidratação</h3>
+            <p>Água fresca filtrada e potes higienizados sempre à disposição logo na entrada do mercado.</p>
+          </div>
+
+          <div class="pet-feature-item">
+            <div class="feature-icon-box">🦴</div>
+            <h3>Petiscaria & Mimos</h3>
+            <p>Biscoitinhos artesanais cortesia na entrada e uma gôndola completa de petiscos naturais e rações nobres.</p>
+          </div>
+
+          <div class="pet-feature-item">
+            <div class="feature-icon-box">✨</div>
+            <h3>Protocolo Sanitário Rigoroso</h3>
+            <p>Higienização constante de carrinhos e áreas com produtos atóxicos e seguros para os animais e alimentos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Sectors Showcase Section -->
+  <section class="sectors-section" id="setores">
+    <div class="container">
+      <div class="section-heading-editorial">
+        <span class="mono-badge">CONHEÇA NOSSOS CORREDORES</span>
+        <h2 class="section-title-serif">Um setor para cada momento do seu <span class="serif-italic">dia a dia</span>.</h2>
+        <p class="section-subtitle">
+          Clique nas abas abaixo para explorar os produtos frescos de cada área. Você pode adicionar itens à sua cesta com um clique e finalizar o pedido no WhatsApp!
+        </p>
+      </div>
+
+      <!-- Sector Navigation Tabs (Style PEG-AI) -->
+      <div class="sectors-tabs-nav" role="tablist" aria-label="Setores do Mercado">
+        <button class="sector-tab-btn active" data-sector="hortifruti" role="tab" aria-selected="true" id="tab-hortifruti">
+          <span class="tab-index">01</span>
+          <span class="tab-title">Hortifrúti Fresco</span>
+          <span class="tab-tag">Direto do Produtor</span>
+        </button>
+
+        <button class="sector-tab-btn" data-sector="acougue" role="tab" aria-selected="false" id="tab-acougue">
+          <span class="tab-index">02</span>
+          <span class="tab-title">Açougue & Carnes</span>
+          <span class="tab-tag">Cortes Nobres</span>
+        </button>
+
+        <button class="sector-tab-btn" data-sector="padaria" role="tab" aria-selected="false" id="tab-padaria">
+          <span class="tab-index">03</span>
+          <span class="tab-title">Padaria & Pães</span>
+          <span class="tab-tag">Fornadas Quentes</span>
+        </button>
+
+        <button class="sector-tab-btn" data-sector="mercearia" role="tab" aria-selected="false" id="tab-mercearia">
+          <span class="tab-index">04</span>
+          <span class="tab-title">Mercearia & Empório</span>
+          <span class="tab-tag">Marcas Essenciais</span>
+        </button>
+
+        <button class="sector-tab-btn" data-sector="petadega" role="tab" aria-selected="false" id="tab-petadega">
+          <span class="tab-index">05</span>
+          <span class="tab-title">Espaço Pet & Adega</span>
+          <span class="tab-tag">Vinhos & Mimos</span>
+        </button>
+      </div>
+
+      <!-- Sector Info Highlight Card -->
+      <div class="sector-banner-card" id="sectorBanner">
+        <div class="sector-banner-left">
+          <span class="sector-tag-pill" id="sectorPillTag">SETOR 01 · FRESCO & ORGÂNICO</span>
+          <h3 class="sector-banner-title" id="sectorBannerTitle">Hortifrúti & Feira Selecionada</h3>
+          <p class="sector-banner-desc" id="sectorBannerDesc">
+            Frutas doces, legumes higienizados e verduras selecionadas manualmente todas as manhãs. A garantia da maçã crocante e da laranja suculenta na sua mesa.
+          </p>
+        </div>
+        <div class="sector-banner-right">
+          <div class="sector-stats-box">
+            <span class="stat-highlight">100%</span>
+            <span class="stat-detail">Frescor auditado diariamente</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid Display -->
+      <div class="products-showcase-grid" id="productsGrid">
+        <!-- Injected via JavaScript based on active sector -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional / How it works Section -->
+  <section class="experience-section" id="diferenciais">
+    <div class="container">
+      <div class="experience-grid">
+        <div class="experience-content">
+          <span class="mono-badge">COMO FUNCIONA O ATENDIMENTO</span>
+          <h2 class="section-title-serif">A simplicidade de pedir no <span class="serif-italic">WhatsApp</span>.</h2>
+          <p class="section-body">
+            Fazer compras no Mercato Jardim é tão natural quanto conversar com quem você conhece. Monte sua cesta pelo site, envie para nossa equipe e receba fotos dos cortes e frutas antes de confirmar.
+          </p>
+
+          <div class="workflow-steps-list">
+            <div class="workflow-step">
+              <span class="step-circle">01</span>
+              <div class="step-text">
+                <h4>Monte sua cesta no site</h4>
+                <p>Navegue pelos setores e clique em <em>+ Adicionar</em> nos produtos que deseja.</p>
+              </div>
+            </div>
+
+            <div class="workflow-step">
+              <span class="step-circle">02</span>
+              <div class="step-text">
+                <h4>Envie sua lista com 1 clique</h4>
+                <p>O sistema organiza seu pedido certinho e abre a conversa oficial no WhatsApp.</p>
+              </div>
+            </div>
+
+            <div class="workflow-step">
+              <span class="step-circle">03</span>
+              <div class="step-text">
+                <h4>Confirmação em tempo real</h4>
+                <p>Nossa equipe confere o ponto da carne, o frescor das frutas e combina a entrega rápida.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card-highlight">
+          <div class="card-inner-box">
+            <div class="badge-accent">◆ COMPRA PERSONALIZADA</div>
+            <h3 class="box-title">Dois números dedicados para atender você</h3>
+            <p class="box-desc">Sem robôs complicados. Atendimento humano, atencioso e pronto para separar as melhores peças para você.</p>
+            
+            <div class="whatsapp-contact-cards">
+              <a href="https://wa.me/5511983215016?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Mercato%20Jardim" target="_blank" rel="noopener" class="wa-contact-pill">
+                <span class="wa-dot"></span>
+                <div class="wa-info">
+                  <span class="wa-channel">WhatsApp Principal · Loja</span>
+                  <strong class="wa-number">(11) 98321-5016</strong>
+                </div>
+                <span class="wa-arrow">→</span>
+              </a>
+
+              <a href="https://wa.me/5511973668877?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Mercato%20Jardim" target="_blank" rel="noopener" class="wa-contact-pill">
+                <span class="wa-dot"></span>
+                <div class="wa-info">
+                  <span class="wa-channel">WhatsApp Linha Direta · Delivery</span>
+                  <strong class="wa-number">(11) 97366-8877</strong>
+                </div>
+                <span class="wa-arrow">→</span>
+              </a>
+            </div>
+
+            <div class="box-footer-note">
+              <span>⚡ Tempo médio de resposta: <strong>menos de 5 minutos</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Map Section -->
+  <section class="location-section" id="localizacao">
+    <div class="container">
+      <div class="location-card">
+        <div class="location-details">
+          <span class="mono-badge">VENHA NOS CONHECER PESSOALMENTE</span>
+          <h2 class="section-title-serif">Fácil localização na <span class="serif-italic">Vila Valparaíso</span>.</h2>
+          <p class="location-address-p">
+            <strong>Rua Piracicaba, 244</strong><br>
+            Vila Valparaíso · Santo André - SP<br>
+            <span class="cep-note">Estacionamento conveniente no local & rampa acessível para pets</span>
+          </p>
+
+          <div class="hours-box">
+            <h4 class="hours-title">Horário de Funcionamento:</h4>
+            <div class="hours-row">
+              <span>Segunda a Sábado:</span>
+              <strong>07h30 às 20h30</strong>
+            </div>
+            <div class="hours-row">
+              <span>Domingos e Feriados:</span>
+              <strong>08h00 às 14h00</strong>
+            </div>
+          </div>
+
+          <div class="location-cta-group">
+            <a href="https://maps.google.com/?q=Rua+Piracicaba+244+Vila+Valparaiso+Santo+Andre+SP" target="_blank" rel="noopener" class="btn-primary">
+              Abrir no Google Maps →
+            </a>
+            <a href="https://waze.com/ul?q=Rua+Piracicaba+244+Santo+Andre" target="_blank" rel="noopener" class="btn-secondary">
+              Abrir no Waze
+            </a>
+          </div>
+        </div>
+
+        <div class="location-visual-map">
+          <div class="map-aesthetic-frame">
+            <div class="map-pin-overlay">
+              <div class="map-pulse-marker"></div>
+              <div class="map-tooltip">
+                <strong>Mercato Jardim 🐾</strong>
+                <span>Rua Piracicaba, 244</span>
+              </div>
+            </div>
+            <!-- Stylized Minimal Map Background SVG -->
+            <svg class="map-svg-grid" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="320" fill="#ECE6D8"/>
+              <!-- Grid Roads -->
+              <path d="M 0 80 L 400 80" stroke="#FFFFFF" stroke-width="12"/>
+              <path d="M 0 200 L 400 220" stroke="#FFFFFF" stroke-width="16"/>
+              <path d="M 120 0 L 140 320" stroke="#FFFFFF" stroke-width="14"/>
+              <path d="M 280 0 L 260 320" stroke="#FFFFFF" stroke-width="18"/>
+              <path d="M 40 140 Q 200 160 360 110" stroke="#FED401" stroke-width="8" stroke-dasharray="6,6"/>
+              
+              <!-- Street Labels -->
+              <text x="15" y="70" font-family="'Inter Tight', sans-serif" font-size="11" fill="#88857F" font-weight="600">R. PIRACICABA</text>
+              <text x="145" y="25" font-family="'Inter Tight', sans-serif" font-size="11" fill="#88857F" font-weight="600">AV. ATLÂNTICA</text>
+              <text x="275" y="300" font-family="'Inter Tight', sans-serif" font-size="11" fill="#88857F" font-weight="600">VILA VALPARAÍSO</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrapper">
+        <h3 id="cartDrawerTitle" class="cart-drawer-title">Sua Cesta Mercato</h3>
+        <span class="cart-drawer-subtitle" id="drawerItemCount">0 itens adicionados</span>
+      </div>
+      <button class="btn-close-drawer" id="closeCartBtn" aria-label="Fechar carrinho">✕</button>
+    </div>
+
+    <!-- Empty State -->
+    <div class="cart-empty-state" id="cartEmptyState">
+      <div class="empty-icon">🧺</div>
+      <h4>Sua cesta ainda está vazia</h4>
+      <p>Navegue pelos setores e clique em <strong>+ Adicionar</strong> para montar sua lista de compras.</p>
+      <button class="btn-secondary" id="emptyCartExploreBtn">Explorar Produtos Agora →</button>
+    </div>
+
+    <!-- Cart Item List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically rendered here -->
+    </div>
+
+    <!-- Cart Footer with WhatsApp Checkout -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-summary-line">
+        <span>Total de Itens:</span>
+        <strong id="cartSummaryTotal">0 produtos</strong>
+      </div>
+      <p class="cart-checkout-disclaimer">
+        Ao clicar abaixo, sua lista será formatada e enviada diretamente para o WhatsApp oficial do Mercato Jardim.
+      </p>
+
+      <div class="checkout-actions">
+        <a href="#" id="checkoutWaBtn" class="btn-primary checkout-btn" target="_blank" rel="noopener">
+          Enviar Pedido pelo WhatsApp →
+        </a>
+        <button class="btn-text-clear" id="clearCartBtn">Limpar cesta</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+    <span class="toast-icon">✨</span>
+    <span class="toast-message" id="toastMessage">Item adicionado à cesta!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand-col">
+        <div class="footer-logo">M·J</div>
+        <h3 class="footer-title">Mercato Jardim</h3>
+        <p class="footer-bio">
+          O primeiro supermercado pet friendly de São Paulo. Qualidade de feira, cortes nobres, padaria com fermentação natural e carinho especial com seu animalzinho.
+        </p>
+        <span class="footer-meta">Santo André · Vila Valparaíso · SP</span>
+      </div>
+
+      <div class="footer-links-col">
+        <span class="footer-col-title">Setores</span>
+        <ul class="footer-links">
+          <li><a href="#setores" class="footer-link" data-goto="hortifruti">Hortifrúti & Orgânicos</a></li>
+          <li><a href="#setores" class="footer-link" data-goto="acougue">Açougue & Carnes Nobres</a></li>
+          <li><a href="#setores" class="footer-link" data-goto="padaria">Padaria & Confeitaria</a></li>
+          <li><a href="#setores" class="footer-link" data-goto="mercearia">Mercearia & Empório</a></li>
+          <li><a href="#setores" class="footer-link" data-goto="petadega">Espaço Pet & Adega</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <span class="footer-col-title">Contatos Rápidos</span>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/5511983215016" target="_blank" rel="noopener" class="footer-link">WhatsApp 1: (11) 98321-5016</a></li>
+          <li><a href="https://wa.me/5511973668877" target="_blank" rel="noopener" class="footer-link">WhatsApp 2: (11) 97366-8877</a></li>
+          <li><a href="#localizacao" class="footer-link">Rua Piracicaba, 244</a></li>
+          <li><span class="footer-link-static">Estacionamento Gratuito</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom-bar">
+      <p>© 2026 Mercato Jardim. Todos os direitos reservados. Identidade visual inspirada na excelência e design contemporâneo.</p>
+      <div class="footer-bottom-badges">
+        <span class="badge-mini">100% Pet Friendly</span>
+        <span class="badge-mini">Santo André · SP</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
